@@ -63,7 +63,7 @@ export default {
     const getIpInfo = async () => {
       try {
         const data = await axios.get(
-          `https://geo.ipify.org/api/v1?apiKey=${process.env.API_IP}&ipAddress=${queryIp.value}`
+          `https://geo.ipify.org/api/v1?apiKey=at_b69g5ETC0NVw4O7fWq7MKfdjrPWGC&ipAddress=${queryIp.value}`
         );
         const result = data.data;
         ipInfo.value = {
@@ -87,7 +87,7 @@ export default {
 
       leaflet
         .tileLayer(
-          `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${process.env.API_MAXBOX}`,
+          `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaW1hbm9scnRlZ2EiLCJhIjoiY2tyMmFveWc2MHBmeTJ1dGNlNWt6dDAzcCJ9.Z_kSKUi-qSNH1yWXqiYxtQ`,
           {
             attribution:
               'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -95,7 +95,8 @@ export default {
             id: "mapbox/streets-v11",
             tileSize: 512,
             zoomOffset: -1,
-            accessToken: process.env.API_MAXBOX,
+            accessToken:
+              "pk.eyJ1IjoiaW1hbm9scnRlZ2EiLCJhIjoiY2tyMmFveWc2MHBmeTJ1dGNlNWt6dDAzcCJ9.Z_kSKUi-qSNH1yWXqiYxtQ",
           }
         )
         .addTo(myMap);
